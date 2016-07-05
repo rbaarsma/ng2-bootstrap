@@ -144,14 +144,8 @@ export class TypeaheadDirective implements OnInit {
     }
 
     // if shift + tab, close items list
-    if (e.shiftKey && e.keyCode === 9) {
+    if (e.keyCode === 9) {
       this.hide();
-      return;
-    }
-
-    // if tab select current item
-    if (!e.shiftKey && e.keyCode === 9) {
-      this.container.selectActiveMatch();
       return;
     }
   }
